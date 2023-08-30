@@ -29,16 +29,6 @@ public class LottoUtil {
 		return lottoNumbers.size() == NUMBER_OF_LOTTO_NUMS;
 	}
 
-	public static boolean isValidRangeOfNumbers(List<Integer> lottoNumbers) {
-		return lottoNumbers.stream().allMatch(lottoNumber ->
-			lottoNumber >= RANGE_MIN && lottoNumber <= RANGE_MAX
-		);
-	}
-
-	public static boolean isNumbersUnique(List<Integer> lottoNumbers) {
-		return lottoNumbers.stream().distinct().count() == NUMBER_OF_LOTTO_NUMS;
-	}
-
 	public static boolean isNumericList(List<String> lottoNumbers) {
 		for (String str : lottoNumbers) {
             try {
