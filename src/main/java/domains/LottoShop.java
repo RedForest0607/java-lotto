@@ -8,7 +8,7 @@ import utils.LottoUtil;
 public class LottoShop {
 	public static final int LOTTO_PRICE = 1_000;
 
-	public static List<Lotto> buyLotto(int price) {
+	public static Lottos buyLotto(int price) {
 		int count = price / LOTTO_PRICE;
 		List<Lotto> lottos = new ArrayList<>();
 
@@ -16,6 +16,6 @@ public class LottoShop {
 			lottos.add(new Lotto(LottoUtil.getRandInts()));
 		}
 
-		return lottos;
+		return new Lottos(lottos);
 	}
 }

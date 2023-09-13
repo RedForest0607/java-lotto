@@ -3,7 +3,9 @@ package domains;
 import java.util.Objects;
 
 import exceptions.LottoWrongInputException;
+import lombok.Getter;
 
+@Getter
 public class Number {
 	public static final int RANGE_MIN = 1;
 	public static final int RANGE_MAX = 45;

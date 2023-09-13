@@ -14,8 +14,7 @@ public class Lotto {
 		this.numbers = new Numbers(lottoNumbers);
 	}
 
-	//몇개인지
-	public boolean isWinning(List<Integer> winningNumbers) {
-		return false;
+	public WinningPrize getWinningPrize(Lotto comparison) {
+		return WinningPrize.matchPrizeResult(this.numbers.match(comparison.numbers));
 	}
 }
